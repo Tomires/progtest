@@ -1,0 +1,298 @@
+@font-face {
+	font-family: 'Yahoo';
+	src: url(res/Yahoo.eot); /* MSIE */
+}
+
+@font-face {
+	font-family: 'Yahoo';
+	src: url(res/Yahoo.ttf) format('truetype'); /* real browsers */
+}
+
+h2{ page-break-before: always; }
+.shoppingheader{ page-break-before: always; }
+/*.news{ page-break-before: always; }*/
+
+.logo{
+	text-align: center;
+	font-family: "Yahoo";
+	color: red;		/* aplikuje se na hlavni strance */
+	font-size: 4.6em;
+	margin: 0;
+	text-shadow: 0.05em 0.05em 0em darkgray;
+	font-weight: bold;
+			/* jen pro zajimavost - puvodni podoba headeru */
+						/* aneb jak si nekomplikovat zivot */
+	/*margin-left: auto;
+	margin-right: auto;
+	text-decoration: none;
+	font-size: 0;
+	font-weight: normal;
+	background-image: url("res/logo.png");
+	background-repeat: none;
+	background-size: 100%;
+	width: 320px;	
+	height: 100px;	/* tady je vyuziti pixelu nevyhnutelne 	*/
+					/* element by se sice mohl adaptovat na	*/	
+					/* rozliseni, ale vyhody jsou u takto  	*/
+					/* maleho obrazku minimalni				*/
+}
+
+.logo a{
+	text-decoration: none;
+	color: red;
+}
+
+li{
+	padding-bottom: 1em;
+}
+
+.sitemap li{
+	padding-bottom: 0;
+}
+
+legend{
+	display: none;
+} /* total validator / WCAG 2.0 to tam chce */
+
+fieldset{
+	border:none;
+	padding: 0.1em;
+}
+
+abbr{
+	border-bottom: 0.1em dotted black;
+    cursor: help;
+}
+
+#menu{ padding-left: 0; }
+
+#menu li{
+list-style-Type: none;
+padding: 0 0 20px 90px; /* vyjimka, kdy je nutne pouzit px */
+}
+
+#menu li a{
+	color: red;
+	font-size: 1.5em;
+}
+
+#menu li a:hover{
+	color: green;
+}
+
+#menu li:nth-of-type(1){ background: url("res/sect1.png") no-repeat left top; }
+#menu li:nth-of-type(2){ background: url("res/sect2.png") no-repeat left top; }
+#menu li:nth-of-type(3){ background: url("res/sect3.png") no-repeat left top; }
+#menu li:nth-of-type(4){ background: url("res/sect4.png") no-repeat left top; }
+#menu li:nth-of-type(5){ background: url("res/sect5.png") no-repeat left top; }
+
+.linkout {
+	background: url("res/link_icon.gif") no-repeat left top;
+	padding-left: 25px; /* dalsi z vyjimek, kdy je nutne pouzit px */
+}
+
+.mailout {
+	background: url("res/mail_icon.gif") no-repeat left top;
+	padding-left: 25px; /* dalsi z vyjimek, kdy je nutne pouzit px */
+}
+
+.search{
+	border-right: 0.2em solid lightgray;
+	background-color: white;
+	float: right;
+}
+
+.navigation{
+	background-color: white;
+	text-align: center;
+	padding: 1em;
+	border-right: 0.2em solid lightgray;
+	border-left: 0.2em solid lightgray;
+	list-style: none;
+	height: 1.5em;
+}
+
+#previous	{ float: left; }
+#next		{ float: right; }
+
+.navigation li{
+	display: inline; 
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.hidden_nav{
+	visibility: hidden;
+}
+
+.footer{
+	padding-top: 0.4em;
+	text-align: center;
+}
+
+.footer dt{
+	display: inline; 
+	padding: 0.3em;
+}
+
+.footer dt:nth-of-type(1){ display: none; }
+.footer dt:nth-of-type(2){ display: none; }
+
+.footer dd{ 
+	display: inline;
+	margin: 0;
+}
+
+body{ 
+	background-color: whitesmoke;
+	font-family: sans-serif;
+}
+
+.main{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 55em;
+	padding: 1em;
+	/*background-color: lightblue; /* blue is for trust, faith */
+	/*border: 0.4em double white;*/
+	font-size: 1.1em;
+}
+
+
+
+.address dt{	display: none;}
+.address dd{ margin: 0; }
+
+.map{
+	float: right;
+	width: 100%;
+	max-width: 25em;
+	padding-bottom: 1em;
+}
+
+.news{
+	border: 0.2em solid darkgray;
+	border-left: 0.2em solid lightgray;
+	border-top: 0;
+	margin-bottom: 1em;
+	background-color: white;
+}
+
+.news h2{
+	background-color: lightgray;
+}
+
+.newsheadline{
+	border-left: 0.2em solid red;
+	padding-left: 0.5em;
+}
+
+.newsstory{
+	padding-left: 2em;
+}
+
+blockquote{ 
+	overflow: auto; 
+	margin-bottom: 2em;
+}
+blockquote p{ margin: 0; }
+
+.quoteauthor{ 
+	float: right; 
+	font-style: italic;
+}
+
+.shoppingheader h2{ display: inline; }
+.shoppingheader img{ float: right; }
+
+/*****			skryvani borderu		*****/
+/*@media (max-width: 55em){
+	body{ background-color: lightblue; }
+	.main{ border: none; }
+}*/
+
+/***** 		styly pro mala zarizeni 	*****/
+@media (max-width: 30em){
+	
+	.logo{ font-size: 3em; }
+	
+	#menu li{ padding: 0 0 20px 0; }
+	
+	#menu li:nth-of-type(1){ background: none; }
+	#menu li:nth-of-type(2){ background: none; }
+	#menu li:nth-of-type(3){ background: none; }
+	#menu li:nth-of-type(4){ background: none; }
+	#menu li:nth-of-type(5){ background: none; }
+	
+	#previous{ float: none; }
+	#next { 
+		float: none; 
+		display: inline-block;
+	}
+	
+	.search{
+		float: none;
+		border-left: 0.2em solid lightgray;
+	}
+	
+	.shoppingheader img{ 
+		float: none; 
+		display: block;
+	}
+	
+	abbr{ border-bottom: none; } /* dotykova zarizeni vetsinou focus */
+								/* nepodporuji, nebudeme tedy mast uzivatele */
+
+}
+
+/*****			styly pro tisk			*****/
+@media print {
+
+	.logo{
+		color: black;
+		text-shadow: none; 
+	}
+	
+	.logo a{ color: black; }
+	
+	.news{ border: none; }
+	.news h2{ background-color: transparent; }
+	
+	.main{ background-color: white; }
+	
+	#menu li a{ color: black; }
+	
+	abbr{ border: none; }
+	
+	.navigation{ display: none;	}
+	.search{ display: none; }
+	
+	.shoppingheader img {	display: none; }
+	
+	#menu li{ 
+		background: none; 
+		padding: 0 0 20px 0;
+	}
+	
+	a{
+		text-decoration: none;
+		color: black;
+	}
+	
+	.linkout {
+		background: none;
+		padding-left: 0;
+	}
+
+	.mailout {
+		background: none;
+		padding-left: 0;
+	}
+	
+	.map { float: none; }
+	
+	.newsheadline{ border-left: 0.2em solid black; }
+	
+	.footer dt:nth-of-type(3){ display: none; }
+	.footer dt:nth-of-type(4){ display: none; }
+}
