@@ -1,0 +1,48 @@
+interface DataOutput {
+	public void	writeInt ( int v ) ;
+	public void	writeByte ( int b ) ;
+}
+interface DataInput {
+	public byte	readByte () ;
+	public int	readInt () ;
+}
+interface AutoCloseable {
+	public void	close () ;
+}
+interface Closeable extends AutoCloseable {
+	public void	close () ;
+}
+interface Flushable {
+	public void	flush () ;
+}
+class OutputStream implements Closeable , Flushable {
+	OutputStream () ;
+	public void	close () ;
+	public void	flush () ;
+	public void	write ( int b ) ;
+	public void 	write ( byte b , int off , int len ) ;
+}
+class FilterOutputStream extends OutputStream {
+	protected OutputStream	out ;
+	public FilterOutputStream ( OutputStream out ) ;
+	public void	close () ;
+	public void	flush () ;
+	public void	write ( int b ) ;
+}
+class DataOutputStream extends FilterOutputStream implements DataOutput {
+	private int	written ;
+	public DataOutputStream ( OutputStream out ) ;
+	public void	flush () ;
+	public int	size () ;
+	public void	writeInt ( int v ) ;
+	public void	writeByte ( int v ) ;
+}
+class RandomAccessFile implements DataOutput , DataInput , Closeable {
+	public void	close () ;
+	public long	length () ;
+	public byte	readByte () ;
+	public int	readInt () ;
+	public void	seek ( long pos ) ;
+	public void	writeByte ( int v ) ;
+	public void	writeInt ( int v ) ;
+}

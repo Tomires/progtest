@@ -1,0 +1,25 @@
+set multiplot
+set title "@FIT_CTU Twitter Statistics"
+set y2tics
+set ylabel "Tweets"
+set y2label "Followers"
+set style data lines
+set key autotitle columnhead outside
+set grid noxtics ytics
+set xtics rotate by 270
+set size 1,1
+set origin 0,0
+plot "sample.txt" index "previous" using 0:3 axes x1y1,"" index "previous" using 0:4 axes x1y1,"" index "previous" using 0:5 axes x1y1, "" index "previous" using 0:2:xticlabel(1) axes x1y2 with lines linewidth 2 linecolor rgbcolor "black"
+unset title
+unset ylabel
+unset ytics
+unset xtics
+unset x2tics
+unset y2label
+unset key
+unset grid
+set y2tics
+set size 0.3, 0.5
+set origin 0.75, 0.05
+plot "sample.txt" index "previous" using ((0:2)+(0:3)) with boxes fs pattern 1, "" index "previous" using 0:2 with boxes fs pattern 2
+unset multiplot
