@@ -1,0 +1,23 @@
+Jednoduchá obecná databáze + jednoduchý SQL jazyk. tzn. databáze která umí pracovat s tabulkami s libovolným záhlavím (tedy s různými sloupečky dat). Databáze se ukládá do souboru. Databáze musí podporovat příkazy: CREATE/DELETE/SELECT (bez vnořených SELECTů) a musí existovat příkaz pro nahrání datového souboru za běhu aplikace. Aplikace je řízena ze souboru, tedy: program prečte příkazy ze souboru (nebo i ze standartního vstupu) a příkazy provede. Nahrání souboru s databází je provedeno pomocí příkazu LOAD DATABASE "filename".
+
+Ukázka příkazů:
+CREATE TABLE TEST(X INTEGER, Y VARCHAR(255));
+CREATE TABLE TEST2(A INTEGER, B VARCHAR(255));
+INSERT INTO TEST VALUES(1, "abcde");
+INSERT INTO TEST VALUES(2, "defgh");
+INSERT INTO TEST VALUES(4, "tersf");
+INSERT INTO TEST2 VALUES(2, "abcde");
+INSERT INTO TEST2 VALUES(3, "defgh");
+INSERT INTO TEST2 VALUES(4, "tersf");
+SELECT X FROM TEST;
+SELECT X, Y FROM TEST;
+SELECT * FROM TEST;
+SELECT * FROM TEST,TEST2 WHERE X=A;
+DELETE TABLE TEST;
+
+a prikaz na nahrani databaze: LOAD DATABASE "filename" a prikaz na ulozeni databaze: SAVE DATABASE "filename"
+tedy: parsování příkazů proveďte "staticky" podle počátečního řetězce a polohy dalších klíčových slov. Jako datové typy podporujte VARCHAR, INTEGER, DATE a DOUBLE. 
+
+Nápověda: pole jednoduchých datových typů (double, int, apod.) se (de)serializuje velmi jednoduše: do souboru stačí uložit velikost pole a přímo obsah paměti. Pole řetězců (char *) se dá serializovat podobně: a) uložíme počet prvků; b) postupně zapisujeme jednotlivé řetězce (včetně ukončovací nuly). 
+
+Tento text má rámcově vymezit téma semestrální práce. Podrobnější podmínky viz. Edux.
