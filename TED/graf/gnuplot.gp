@@ -1,6 +1,3 @@
-set terminal png nocrop medium butt size 640,480
-set output "output.png"
-
 set multiplot
 set timefmt "%H:%M:%S"
 set xdata time
